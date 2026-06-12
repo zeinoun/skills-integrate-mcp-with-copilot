@@ -13,6 +13,27 @@
     </header>
 
     <main>
+      <section id="auth-container">
+        <div id="user-info" class="hidden">
+          <strong id="user-name"></strong>
+          <span id="user-role"></span>
+          <button id="logout-btn">Log Out</button>
+        </div>
+
+        <form id="login-form">
+          <h3>Log In</h3>
+          <div class="form-group">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" required placeholder="your-email@mergington.edu" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required placeholder="password" />
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
@@ -21,12 +42,12 @@
         </div>
       </section>
 
-      <section id="signup-container">
+      <section id="signup-container" class="hidden">
         <h3>Sign Up for an Activity</h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <input type="email" id="email" required placeholder="your-email@mergington.edu" readonly />
           </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
@@ -39,6 +60,11 @@
         </form>
         <div id="message" class="hidden"></div>
       </section>
+
+      <section id="unauthenticated-note">
+        <p>Please log in with a student account to sign up for activities.</p>
+      </section>
+
     </main>
 
     <footer>
